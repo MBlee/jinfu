@@ -1,0 +1,78 @@
+$HeaderHeight: 100px;
+$SelectColor: #EA5504;
+.MBHeader{
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,.2);
+	.MBHeaderBox{
+		max-width: 1200px;
+		margin: 0 auto;
+		height: $HeaderHeight;
+		line-height: $HeaderHeight;
+		display: grid;
+		grid-template-columns: repeat(2,max-content);
+		justify-content: space-between;
+		.left{
+			display: grid;
+			align-content: center;
+			align-items: center;
+			line-height: 0;
+			a{
+				.logo{
+					margin-right: 15px;
+				}
+			}
+		}
+		.right{
+
+			.navs{
+				display: grid;
+				grid-template-columns: repeat(6,max-content);
+				.navItem{
+					a{
+						padding: 25px;
+						color: #222;
+						font-weight: 600;
+						font-size: 17px;
+					}
+					&.select a,
+					&:hover a{
+						color: $SelectColor;
+					}
+					&:hover .subNav{
+						display: block;
+					}
+					.subNav{
+						position: absolute;
+						left: 0;
+						display: none;
+						width: 100vw;
+						background-color: #F7F8F8;
+					}
+
+				}
+			}
+		}
+	}
+}
+
+.MBHeader.transparent{
+	box-shadow: none;
+	.MBHeaderBox{
+		.right{
+			.navs{
+				.navItem{
+					a{
+						color: #eee;
+						font-weight: 500;
+					}
+					&.select a,
+					&:hover a{
+						font-weight: 700;
+					}
+					.subNav{
+						background-color: #F7F8F8;
+					}
+				}
+			}
+		}
+	}
+}

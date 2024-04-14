@@ -1,0 +1,70 @@
+.MBSubnav{
+	.indicator{
+		position: absolute;
+		width: 0;
+		height: 0;
+		top: -8px;
+		border-bottom: 8px solid #EA5504;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		z-index: 100;
+	}
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,.2);
+	padding: 20px 0;
+	.MBSubnavBox{
+		margin:0 auto;
+		line-height: 2;
+		max-width: 1200px;
+		// margin: 0 auto;
+		.firstStageBox{
+			display: grid;
+			grid-template-columns: repeat(2,max-content);
+			.splitLine{
+				height: 1px;
+				background-color: #ddd;
+				width: 170px;
+				margin: 5px 0 10px;
+			}
+			.firstStageItem{
+				margin-right: 30px;
+
+				h2,&:nth-of-type(2) h2:hover{
+					font-weight: 600;
+					font-size: 17px;
+				}
+				&:nth-of-type(2){
+					h2{
+						font-weight: 100;
+					}
+				}				
+				.secondStageBox{
+					h3{
+						font-size: 16px;
+						font-weight: 100;
+						.icon{
+							margin-left: 10px;
+							font-weight: 500;
+							color: #EA5504;
+							display: none;
+						}
+						&:hover{
+							color: #EA5504;
+						}
+						&:hover .icon{
+							display: inline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.MBSubnav.transparent{
+	.indicator{
+		border-bottom: 8px solid #eee;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+	}
+	box-shadow: none;
+}

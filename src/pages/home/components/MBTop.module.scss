@@ -1,0 +1,51 @@
+$FontColor: rgba(0,0,0,.6);
+$IconColor: #EA5504;
+$FontSize: 12px;
+$TopHeight: 30px;
+
+
+.MBTop{
+	background-color: rgba(56,55,53,0.04);
+	.MBTopBox{
+		margin: 0 auto;
+		max-width: 1200px;
+		display: grid;
+		grid-template-columns: repeat(2,max-content);
+		justify-content: space-between;
+		height: $TopHeight;
+		line-height: $TopHeight;
+		color: $FontColor;
+		font-size: $FontSize;
+	}
+	.left{
+		span{
+			margin-right: 10px;
+		}
+	}
+	.right{
+		a{
+			color: $FontColor;
+		}
+		.preIcon{
+			color: $IconColor;
+			margin-right: 5px;
+			font-size: 15px;
+		}
+		.span{
+
+		}
+	}
+}
+
+.MBTop.transparent{
+	background-color: transparent;
+	box-shadow:0 .3px 1px 0 #aaa; 
+	.MBTopBox{
+		color: #aaa;
+	}
+	.right{
+		a{
+			color: #aaa;
+		}
+	}
+}
